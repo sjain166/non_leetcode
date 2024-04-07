@@ -11,3 +11,11 @@ public class Main {
     }
 }
 ```
+
+### Remove Trailing Spaces Using `String.trim()` method:
+
+```java
+String str = "  Hello World   ";
+String trimmed = str.trim();
+System.out.println(trimmed); // Output: "Hello World"
+```
