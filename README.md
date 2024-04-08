@@ -40,3 +40,27 @@ while(right < len){
 return avg;
 ```
 
+
+### HashMap Iteration Techniques
+
+#### Using forEach() method
+
+The `forEach()` method allows iterating over the elements of a HashMap using a lambda expression. It takes a BiConsumer functional interface as a parameter, which accepts two arguments: the key and the value of the HashMap entry.
+
+Example:
+```java
+charType.forEach((key, value) -> System.out.println(key + " = " + value));
+```
+
+#### Using entrySet() method with for-each loop
+
+The `entrySet()` method returns a set view of the mappings contained in the HashMap. By using this method with a for-each loop, you can iterate over each entry of the HashMap.
+
+Example:
+```java
+for (Map.Entry<String, String> entry : foodTable.entrySet()) {
+    System.out.println(entry.getKey() + " = " + entry.getValue());
+}
+```
+
+
