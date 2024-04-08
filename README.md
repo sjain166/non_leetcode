@@ -1,3 +1,7 @@
+[![LeetCode Flowchart](https://leetcode.com/explore/interview/card/cheats…20/resources/Figures/DSA/Chapter_11/flowchart.png)](https://leetcode.com/explore/interview/card/cheats…20/resources/Figures/DSA/Chapter_11/flowchart.png)
+
+[![Time Comlexity](https://leetcode.com/explore/interview/card/cheats…/720/resources/Figures/DSA/Chapter_11/sorting.png)](https://leetcode.com/explore/interview/card/cheats…/720/resources/Figures/DSA/Chapter_11/sorting.png)
+
 ### Convert a Array to HashSet
 
 ```java
