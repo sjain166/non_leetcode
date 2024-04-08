@@ -19,3 +19,24 @@ String str = "  Hello World   ";
 String trimmed = str.trim();
 System.out.println(trimmed); // Output: "Hello World"
 ```
+
+### Sliding Window Pattern
+
+```java
+int left = 0;
+int right = 0;
+int len = nums.length;
+double avg = Integer.MIN_VALUE;
+double sum = 0;
+
+while(right < len){
+    sum += nums[right++];
+    if(right - left == k){
+        avg = Math.max(sum / k , avg);
+        sum -= nums[left++];
+    }
+}
+
+return avg;
+```
+
