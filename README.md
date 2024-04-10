@@ -96,3 +96,21 @@ class Solution {
 }
 ```
 
+
+
+### Priority Queue (Min Heap and Max Heap) in Java
+
+#### Min Heap
+
+```java
+PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+```
+By default, the PriorityQueue in Java is a Min Heap. It orders the elements in natural order (ascending order for integers).
+
+#### Max Heap
+
+```java
+PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> Integer.compare(b, a));
+```
+Alternatively, you can create a Max Heap using a custom comparator where we compare `b` with `a` instead of `a` with `b`.
+
