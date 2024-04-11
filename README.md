@@ -114,3 +114,26 @@ PriorityQueue<Integer> maxHeap = new PriorityQueue<>((a, b) -> Integer.compare(b
 ```
 Alternatively, you can create a Max Heap using a custom comparator where we compare `b` with `a` instead of `a` with `b`.
 
+
+### Initiating a MashMap with Values
+
+```java
+import java.util.Map;
+
+public class Main {
+    public static void main(String[] args) {
+        Map<Character, String> map = Map.of(
+            '2' , "abc",
+            '3' , "def",
+            '4' , "ghi",
+            '5' , "jkl",
+            '6' , "mno",
+            '7' , "pqrs",
+            '8' , "tuv",
+            '9' , "wxyz"
+        );
+    }
+}
+```
+
+
