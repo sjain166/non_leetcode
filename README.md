@@ -136,4 +136,21 @@ public class Main {
 }
 ```
 
+### Inline Comparator to Sort Strings on Length
 
+```java
+import java.util.Arrays;
+
+public class StringSortExample {
+    
+    public static void main(String[] args) {
+        String[] strings = {"apple", "banana", "grape", "orange", "kiwi"};
+        
+        Arrays.sort(strings, (s1, s2) -> Integer.compare(s1.length(), s2.length()));
+        
+        // Print sorted strings
+        for (String s : strings) {
+            System.out.println(s);
+        }
+    }
+}
