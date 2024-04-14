@@ -2,6 +2,9 @@
 
 [![Time Comlexity](https://leetcode.com/explore/interview/card/cheats…/720/resources/Figures/DSA/Chapter_11/sorting.png)](https://leetcode.com/explore/interview/card/cheats…/720/resources/Figures/DSA/Chapter_11/sorting.png)
 
+### Important TC Computation :
+- To Find Permutation of n-length Array : O(n * n!)
+
 ### Convert a Array to HashSet
 
 ```java
