@@ -319,4 +319,5 @@ public class App {
 
 Time Complexity : 
 - Construct : O(N)
-- Find/Union/Connected : O(log N)
+- Find/Union/Connected: O(α)
+- N is the number of vertices in the graph. α refers to the Inverse Ackermann function. In practice, we assume it's a constant. In other words, O(α) is regarded as O(1) on average.
