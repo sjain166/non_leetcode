@@ -321,3 +321,54 @@ Time Complexity :
 - Construct : O(N)
 - Find/Union/Connected: O(α)
 - N is the number of vertices in the graph. α refers to the Inverse Ackermann function. In practice, we assume it's a constant. In other words, O(α) is regarded as O(1) on average.
+
+
+# Tree to Undirected Graph Conversion Function
+
+This function, `makeTree`, converts a binary tree into an undirected graph. The function takes in four parameters: the previous node, the current node, a map representing the graph, and a set of leaf nodes. It recursively traverses the tree and constructs an undirected graph while also identifying and collecting the leaf nodes.
+
+## Function Signature
+
+```java
+public void makeTree(TreeNode prevNode, TreeNode currNode, Map<TreeNode, List<TreeNode>> graph, Set<TreeNode> leafNodes)
+```
+
+## Parameters
+
+- `TreeNode prevNode`: The previous node in the traversal. Initially, this can be set to `null`.
+- `TreeNode currNode`: The current node being visited.
+- `Map<TreeNode, List<TreeNode>> graph`: A map representing the graph where each node is mapped to a list of its connected nodes.
+- `Set<TreeNode> leafNodes`: A set to collect all the leaf nodes in the tree.
+
+## How It Works
+
+1. **Base Case**: If the current node (`currNode`) is `null`, the function returns without doing anything.
+2. **Leaf Node Check**: If the current node has no left or right children, it is identified as a leaf node and added to the `leafNodes` set.
+3. **Graph Construction**: 
+   - If the previous node (`prevNode`) is not `null`, the function updates the graph:
+     - It ensures that an entry exists for `prevNode` in the graph and adds `currNode` to its list of connected nodes.
+     - It ensures that an entry exists for `currNode` in the graph and adds `prevNode` to its list of connected nodes.
+4. **Recursive Traversal**: The function recursively calls itself for the left and right children of the current node.
+
+## Example Usage
+
+Here is an example of how you might use the `makeTree` function:
+
+```java
+TreeNode root = // initialize your tree
+Map<TreeNode, List<TreeNode>> graph = new HashMap<>();
+Set<TreeNode> leafNodes = new HashSet<>();
+
+makeTree(null, root, graph, leafNodes);
+
+// Now `graph` contains the undirected graph representation of the tree
+// and `leafNodes` contains all the leaf nodes of the tree
+```
+
+## Notes
+
+- This function assumes that the `TreeNode` class is already defined and that the tree structure is properly initialized before calling `makeTree`.
+- The `graph` parameter should be an empty map when passed to the function, and the `leafNodes` parameter should be an empty set.
+- The function uses the `computeIfAbsent` method to ensure that a node's adjacency list is initialized if it is not already present in the graph.
+
+By following the above steps, the `makeTree` function effectively converts a binary tree into an undirected graph, while also identifying and collecting all the leaf nodes in the tree.
