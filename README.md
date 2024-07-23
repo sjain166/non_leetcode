@@ -372,3 +372,27 @@ makeTree(null, root, graph, leafNodes);
 - The function uses the `computeIfAbsent` method to ensure that a node's adjacency list is initialized if it is not already present in the graph.
 
 By following the above steps, the `makeTree` function effectively converts a binary tree into an undirected graph, while also identifying and collecting all the leaf nodes in the tree.
+
+
+# Topological Sort & Cycle Detection in DAG 
+
+```java
+public boolean dfs(HashMap<Integer, List<Integer>> adjList, int[] visited , Stack<Integer> stack, int node){
+        if(visited[node] == 1)
+            return true; 
+        if(visited[node] == 2)
+            return false;
+        
+        visited[node] = 1;
+        for(int newNode : adjList.get(node)){
+            if(dfs(adjList, visited , stack, newNode))
+                return false;
+        }
+
+        visited[node] = 2;
+        stack.push(node);
+        return false;
+}
+```
+
+
