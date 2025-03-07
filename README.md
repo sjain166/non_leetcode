@@ -417,7 +417,7 @@ class Solution {
 }
 ```
 
-# Fastest Way to Find Prime Number
+# Fastest Way to Find Prime Number (n <= 10^6)
 
 ```java
 public class PrimeChecker {
