@@ -449,5 +449,5 @@ public class PrimeChecker {
     }
 }
 ```
-
+# No of Edges in a Fully Connected Graph = ((n) * (n-1)) / 2;
 
